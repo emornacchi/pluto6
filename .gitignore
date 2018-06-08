@@ -43,3 +43,7 @@ CTestTestfile.cmake
 
 #Backup
 *~
+
+# QtCreator
+CMakeLists.txt.user
+pluto.cbp

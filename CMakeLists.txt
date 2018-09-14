@@ -64,7 +64,7 @@ SET(SOURCES ${SOURCES} ${PLUGIN_CLASSES})
 file(GLOB INCL_FILES RELATIVE "${CMAKE_CURRENT_BINARY_DIR}" "include/*.h" )
 SET(INCL_FILES ${INCL_FILES} ${PHDRS})
 
-MESSAGE( STATUS "INCL_FILES: " ${INCL_FILES} )
+#MESSAGE( STATUS "INCL_FILES: " ${INCL_FILES} )
 
 # You need to tell CMake where to find the ROOT installation. This can be done in a number of ways:
 #   - ROOT built with classic configure/make use the provided $ROOTSYS/etc/cmake/FindROOT.cmake

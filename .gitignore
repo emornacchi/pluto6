@@ -42,7 +42,12 @@ install_manifest.txt
 CTestTestfile.cmake
 
 #Backup
+*.swp
+*.autosave
 *~
+
+# build directory
+/build*
 
 # QtCreator
 CMakeLists.txt.user

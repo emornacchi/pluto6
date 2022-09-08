@@ -267,7 +267,7 @@ Bool_t PStdData::fillDataBase(void) {
 
 #define nmax 999     // maximum number of supported particles
 #define mnpar 70     // number of particles stored permanently
-#define mnmodes 220  // number of decay modes stored permanently
+#define mnmodes 221  // number of decay modes stored permanently
 
 
 // particle naming convention for use with the PParticle constructor
@@ -690,7 +690,7 @@ const int PStdData::NMODES[mnpar]={
   /*10: K0 long   */  6,             /*11: K+        */  6,
   /*12: K-        */  6,             /*13: Neutron   */  1,
   /*14: Proton    */  0,             /*15: Antiproton*/  0,
-  /*16: K0 short  */  3,             /*17: eta       */  8,
+  /*16: K0 short  */  3,             /*17: eta       */  9,
   /*18: Lambda    */  3,             /*19: Sigma+    */  0,
   /*20: Sigma0    */  0,             /*21: Sigma-    */  0,
   /*22: Xi0       */  0,             /*23: Xi-       */  0,
@@ -770,9 +770,10 @@ double PStdData::BRR[mnmodes]={
   0.6851,        // id=16 K0 short --> pi+ + pi-
   0.3129,        // id=16 K0 short --> pi0 + pi0
   0.0018,        // id=16 K0 short --> pi+ + pi- + photon
-  // eta, 8 channels
+  // eta, 9 channels
   0.394,         // id=17 eta --> photon + photon
   0.325,         // id=17 eta --> pi0 + pi0 + pi0
+  0.00025,       // id=17 eta --> pi0 + photon + photon
   0.226,         // id=17 eta --> pi+ + pi- + pi0
   0.0468,        // id=17 eta --> pi+ + pi- + photon
   0.006,         // id=17 eta --> photon + dilepton (Dalitz)
@@ -1038,9 +1039,10 @@ const char *PStdData::MODE[mnmodes]={
   "9008",           // id=16 K0 short --> pi+ + pi-
   "7007",           // id=16 K0 short --> pi0 + pi0
   "1009008",        // id=16 K0 short --> pi+ + pi- + photon
-  // eta, 8 channels
+  // eta, 9 channels
   "1001",           // id=17 eta --> photon + photon
   "7007007",        // id=17 eta --> pi0 + pi0 + pi0
+  "7001001",        // id=17 eta --> pi0 + photon + photon
   "8009007",        // id=17 eta --> pi+ + pi- + pi0
   "8009001",        // id=17 eta --> pi+ + pi- + photon
   "1051",           // id=17 eta --> dilepton + photon (Dalitz)
@@ -1297,6 +1299,7 @@ const char *PStdData::DESCRIPTION[mnmodes]={
   "K0 short --> pi+ + pi- + photon",
   "eta --> photon + photon",
   "eta --> pi0 + pi0 + pi0",
+  "eta --> pi0 + photon + photon",
   "eta --> pi+ + pi- + pi0",
   "eta --> pi+ + pi- + photon",
   "eta --> dilepton + photon (Dalitz)",
@@ -1516,6 +1519,3 @@ const long double PStdData::hbar=6.582122e-25; // units of (GeV s)
 
 
 ClassImp(PStdData)
-
-
-
